@@ -8,14 +8,17 @@
 class ApiClient
 {
 private:
-    String GetData();    
-
+    String GetData();
+    
     unsigned long beginMicros, endMicros;
     unsigned long byteCount = 0;
     bool printWebData = true;
+    String GetHeader();
+    String GetHost();
 public:    
     void Create();
     String MakeCall();
+    String GetIpFromEEPROM(byte values[]);
 };
 
 #endif /* #ifndef __APICLIENT_H__ */
