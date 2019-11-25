@@ -26,18 +26,33 @@ namespace NotificationGateway.Controllers
         }
 
         [HttpPost("MakeCall")]
-        public async Task<IActionResult> MakeCall([FromBody]NotificationModel model)
+        public async Task<ModelBase> MakeCall([FromBody]NotificationModel model)
         {
-            if (!model.UserName.Equals(optionsApp.Value.UserName))
-                return BadRequest();
+            var output = new ModelBase();
+            try
+            {
+                if (!model.UserName.Equals(optionsApp.Value.UserName))
+                    output.AddError("Wrong Username");
+                    //return BadRequest();
 
-            if (!model.Password.Equals(optionsApp.Value.Password))
-                return BadRequest();
+                if (!model.Password.Equals(optionsApp.Value.Password))
+                    output.AddError("Wrong Password");
+                //return BadRequest();
 
-            var result = await notificationService.MakeCall(model).ConfigureAwait(false);
-            if (result.IsValid)
-                return Ok();
-            else return BadRequest();
+                var result = await notificationService.MakeCall(model).ConfigureAwait(false);
+                if (result.IsValid)
+                    return output;
+
+                output.Errors = result.Errors;
+
+                return output;
+            }
+            catch(Exception ex)
+            {
+                output.AddError(ex.Message);
+            }
+
+            return output;
         }
     }
 }

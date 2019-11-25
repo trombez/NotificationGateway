@@ -7,28 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationGateway", "Noti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NG.BLL", "NG.BLL\NG.BLL.csproj", "{1DD05D14-A7C7-4BD5-BF7C-76CCA5631317}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arduino", "Arduino", "{ACD2CA41-9E97-42ED-BA2C-490599E40B90}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41D8115C-C009-49DC-8798-1B63B44D1A62}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WiFi", "WiFi", "{CB3BDBCA-FB27-42BE-B7A8-AA5EAD8BB07F}"
-	ProjectSection(SolutionItems) = preProject
-		Arduino\ESP8266.cpp = Arduino\ESP8266.cpp
-		Arduino\ESP8266.h = Arduino\ESP8266.h
-		Arduino\main_wifi.cpp = Arduino\main_wifi.cpp
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ethernet", "Ethernet", "{A9BAD2E8-D5F7-4BD0-BA85-6BDBC956EEF6}"
-	ProjectSection(SolutionItems) = preProject
-		Arduino\ApiClient.cpp = Arduino\ApiClient.cpp
-		Arduino\ApiClient.h = Arduino\ApiClient.h
-		Arduino\ApiSettings.cpp = Arduino\ApiSettings.cpp
-		Arduino\ApiSettings.h = Arduino\ApiSettings.h
-		Arduino\main.cpp = Arduino\main.cpp
-		Arduino\pitches.h = Arduino\pitches.h
 	EndProjectSection
 EndProject
 Global
@@ -48,10 +29,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{CB3BDBCA-FB27-42BE-B7A8-AA5EAD8BB07F} = {ACD2CA41-9E97-42ED-BA2C-490599E40B90}
-		{A9BAD2E8-D5F7-4BD0-BA85-6BDBC956EEF6} = {ACD2CA41-9E97-42ED-BA2C-490599E40B90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5037C2D-7204-4AF1-9CAE-DEFF2D00946D}

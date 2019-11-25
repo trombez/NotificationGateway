@@ -17,6 +17,7 @@ using NG.BLL.Providers;
 using NG.BLL.Providers.Interfaces;
 using NG.BLL.Services;
 using NG.BLL.Services.Interfaces;
+using Serilog;
 
 namespace NotificationGateway
 {
@@ -63,6 +64,8 @@ namespace NotificationGateway
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
+
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 
