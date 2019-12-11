@@ -1,5 +1,4 @@
 # NotificationGateway
-**Weekend Project : Voice Call by API from Arduino**
 
 Simple project to call a phone number via Twilio service or to launch an IFTTT action to make a voip call.
 All invoked by an HTTP API.
