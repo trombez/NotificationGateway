@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  notificationgateway:
+    image: ${DOCKER_REGISTRY-}notificationgateway
+    build:
+      context: .
+      dockerfile: NotificationGateway/Dockerfile
+
+  proxy:
+    build:
+      context:  ./Nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    links:
+      - notificationgateway  

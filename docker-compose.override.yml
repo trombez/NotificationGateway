@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  notificationgateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000"
